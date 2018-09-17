@@ -1,0 +1,51 @@
+{{extend 'layout.html'}}
+
+<style>
+    .padding_top{
+        padding-top: 1em;
+    }
+
+    .icon{
+        width:20px;
+        height:20px;
+    }
+
+    .wordWrap{
+        width: 38em;
+        text-align: justify;
+    }
+
+    .submit_button{
+        text-align: right;
+    }
+
+    input{
+        width: 150px;
+        height: 25px;
+    }
+</style>
+
+<title>Phone Repair</title>
+<body>
+{{for row in rows:}}
+
+<div class="well">
+    <table>
+        <tr>
+            <td>
+             <div style="text-align:center">
+<img width="200px"
+     src="{{=URL('download', args=row.uploads.up_file)}}" />
+</div>
+
+            </td>
+            <td><button>
+            -
+            </button></td><td><span class='votes'>{{=row.post.votes}}</span></td><td><button>
+            +
+            </button><td><strong>{{=A("comments",_href=URL('view_posts',args=row.post.id))}},{{=row.post.name}}</strong></td></td></tr>
+    </table>
+
+</div>
+{{pass}}
+</body>

@@ -1,0 +1,369 @@
+{{extend 'layout.html'}}
+<style>
+    @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+
+    #background_color {
+        background-color: #5F4B8B;
+        margin: 0px;
+    }
+
+    .links_container {
+        width: 100%;
+        height: 95vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    #clock {
+        font-family: sans-serif;
+        font-size: 3.5rem;
+        font-weight: 600;
+        font-family: "Roboto Mono";
+        color: #fff;
+        margin-bottom: .25em;
+    }
+
+    .weather-container {
+        width: 30%;
+        background-color: #272727;
+        padding: 1em;
+        border-radius: 3px;
+        font-family: "Roboto Mono";
+        color: #fff;
+        text-align: center;
+    }
+    .inline {
+        display: inline-block;
+    }
+
+    .schedule {
+        width: 30%;
+        background-color: #272727;
+        padding: .5em;
+        font-family: "Roboto Mono";
+        color: #fff;
+        text-align: center;
+    }
+
+    .bookmark-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 50%;
+        margin: 1em 0em;
+    }
+
+    @media only screen and (max-width: 960px) {
+        .container {
+            height: auto;
+        }
+        #clock {
+            margin-top: 1em;
+        }
+        .container > .bookmark-container {
+            flex-direction: column;
+            width: 60%;
+        }
+        .bookmark-container > .bookmark-set {
+            width: auto;
+            margin: 1em 0em;
+        }
+    }
+
+    .bookmark-set{
+        padding: 1em;
+        background-color: #272727;
+        border-radius: 3px;
+        font-family: "Roboto Mono";
+        font-size: .85rem;
+        width: 25%;
+        height: 15em;
+        margin: 0em .5em;
+    }
+    .bookmark-inner-container {
+        overflow-y: scroll;
+        height: 80%;
+        vertical-align: top;
+    }
+    .bookmark-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #fff;
+        margin: 0em 0em .35em 0em;
+    }
+    .bookmark {
+        text-decoration: none;
+        color: #8c8c8b;
+        display:block;
+        margin: .5em 0em;
+    }
+    .bookmark:hover {
+        color: #fff;
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 3em;
+    }
+
+    .center_footer_text{
+        text-align: center;
+        margin: 1em auto;
+        color: white;
+    }
+
+    .background{
+        background-color: #FFFFFF;
+    }
+
+    .padding_left{
+        padding-left: 2em;
+    }
+
+    .padding_top{
+        padding-top: 2em;
+    }
+
+    .font{
+        font-family: "Roboto", sans-serif;
+    }
+
+    table{
+        border-collapse: collapse;
+        width:100%;
+        height:40%;
+    }
+    table, th, td{
+        border: 1px solid white;
+        color: white;
+    }
+
+    .class{
+        background-color: #5F4B8B;
+    }
+
+        /* width */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: #272727;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: #888; 
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: white
+    }
+</style>
+
+<body id="background_color">
+    <div class="links_container">
+        <div id="clock"></div>
+        <div class="weather-container">
+            <div class="row">
+                <div id="weather-description"class="inline"></div>
+
+            </div>
+        </div>
+        <div class="bookmark-container">
+            <div class="bookmark-set">
+                <div class="bookmark-title">Daily</div>
+                <div class="bookmark-inner-container">
+                    <a class="bookmark" href="https://mail.ship.edu/" target="_blank">Inbox</a>
+                    <a class="bookmark" href="https://my.ship.edu/" target="_blank">Ship Portal</a>
+                    <a class="bookmark" href="https://mail.google.com/" target="_blank">Gmail</a>
+                </div>
+            </div>
+            <div class="bookmark-set">
+                <div class="bookmark-title">Classes</div>
+                <div class="bookmark-inner-container">
+                    <a class="bookmark" href="https://d2l.ship.edu/d2l/home" target="_blank">D2L (FYS, M&S, Eng, Lab)</a>
+                    <a class="bookmark" href="https://shippensburg-mlpui.openclass.com/" target="_blank">MyLabsPlus (Calculus)</a>
+                    <a class="bookmark" href="https://www.masteringphysics.com/site/login.html" target="_blank">Mastering Physics</a>
+
+                </div>
+            </div>
+            <div class="bookmark-set">
+            <div class="bookmark-title">Online Services</div>
+                <div class="bookmark-inner-container">
+                    <a class="bookmark" href="https://anchor.ship.edu" target="_blank">FTP server</a>
+                    <a class="bookmark" href="https://matlab.mathworks.com" target="_blank">Online MATLab</a>
+                    <a class="bookmark" href="https://www.onlinegdb.com/online_python_interpreter" target="_blank">Online Python</a>
+                </div>
+            </div>
+            <div class="bookmark-set">
+                <div class="bookmark-title">Ship Services</div>
+                <div class="bookmark-inner-container">
+                    <a class="bookmark" href="https://reddit.com" target="_blank">Learning Center</a>
+                    <a class="bookmark" href="http://shipunderground.com/" target="_blank">Ship Underground</a>
+                </div>
+            </div>
+        </div>
+        <div class="schedule">
+            <table>
+                <tr>
+                    <td></td>
+                    <td>Monday</td>
+                    <td>Tuesday</td>
+                    <td>Wednesday</td>
+                    <td>Thursday</td>
+                    <td>Friday</td>
+                </tr>
+                <tr>
+                    <td>8 AM</td>
+                    <td class="class">Calculus</td>
+                    <td class="class">Calculus</td>
+                    <td class="class">Calculus</td>
+                    <td></td>
+                    <td class="class">Calculus</td>
+                </tr>
+                <tr>
+                    <td>9 AM</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>10 AM</td>
+                    <td class="class">Physics</td>
+                    <td></td>
+                    <td class="class">Physics</td>
+                    <td></td>
+                    <td class="class">Physics</td>
+                </tr>
+                <tr>
+                    <td>11 AM</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>12 AM</td>
+                    <td class="class">FYS</td>
+                    <td></td>
+                    <td class="class">FYS</td>
+                    <td></td>
+                    <td class="class">FYS</td>
+                </tr>
+                <tr>
+                    <td>1 PM</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="class">Eng Sem</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2 PM</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3 PM</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4 PM</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>5 PM</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>6 PM</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>7 PM</td>
+                    <td></td>
+                    <td class="class">Phy Lab</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>8 PM</td>
+                    <td></td>
+                    <td class="class">Phy Lab</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+
+<script>
+    // Get current time and format
+    function getTime() {
+        let date = new Date(),
+            min = date.getMinutes(),
+            sec = date.getSeconds(),
+            hour = date.getHours();
+        return "" +
+            (hour < 10 ? ("0" + hour) : hour) + ":" +
+            (min < 10 ? ("0" + min) : min) + ":" +
+            (sec < 10 ? ("0" + sec) : sec);
+    }
+    window.onload = () => {
+        let xhr = new XMLHttpRequest();
+        // Request to open weather map
+        xhr.open('GET', '//api.openweathermap.org/data/2.5/weather?id=4737316&units=imperial&appid=e5b292ae2f9dae5f29e11499c2d82ece');
+        xhr.onload = () => {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    let json = JSON.parse(xhr.responseText);
+                    console.log(json);
+                    document.getElementById("temp").innerHTML = json.main.temp.toFixed(0) + " F";
+                    document.getElementById("weather-description").innerHTML = json.weather[0].description;
+                } else {
+                    console.log('error msg: ' + xhr.status);
+                }
+            }
+        }
+        xhr.send();
+        // Set up the clock
+        document.getElementById("clock").innerHTML = getTime();
+        // Set clock interval to tick clock
+        setInterval( () => {
+            document.getElementById("clock").innerHTML = getTime();
+        },100);
+    }
+</script>
+</body>

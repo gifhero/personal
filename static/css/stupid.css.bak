@@ -1,0 +1,70 @@
+/************
+  Created by Massimo Di Pierro
+  Stupid.css is what the names says, take it with a grain of salt
+  License: BSD
+************/
+
+/*** basic styles ***/
+html {box-sizing:border-box;}
+*, *:after, *:before {border:0; margin:0; padding:0; box-sizing:inherit;}
+html, body {max-width: 100vw; overflow-x: hidden}
+body {font-family:"HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif}
+header, main, footer {display:block; with:100%} /* IE fix */
+
+/*** helpers ***/
+.rounded {-moz-border-radius:5px; border-radius:5px}
+.padded {padding:10px 20px}
+.center {text-align:center; margin-left:auto; margin-right:auto}
+.center>div {text-align:left}
+.right {right:0; text-align:right}
+.middle div {vertical-align:middle}
+.bottom div {vertical-align:bottom}
+.xscroll {overflow-x:scroll !important}
+.yscroll {overflow-y:scroll !important}
+.nowrap {white-space:nowrap; overflow-x:hidden}
+.fill {width:100%}
+.lifted {box-shadow:5px 5px 10px #666}
+.relative {position:relative}
+.relative>div {position:absolute}
+.spaced {margin-bottom:20px; margin-top:20px}
+.hidden {display:none !important}
+
+/**** underline effect ***/
+a:not(.btn):not(.noeffect) {position:relative}
+a:not(.btn):not(.noeffect):hover {color:#26a69a}
+a:not(.btn):not(.noeffect):hover:after {width:100%}
+a:not(.btn):not(.noeffect):after {
+  display:block;
+  position:absolute;
+  left:0;
+  bottom:-1px;
+  width:0;
+  height:2px;
+  background-color:#26a69a;
+  content:"";
+  transition:width 0.2s;
+}
+
+
+/*** accordion ***/
+.accordion>label{cursor:pointer}
+.accordion>input ~ label:before {content:"\25b2"; color:#ddd}
+.accordion>input:checked ~ label:before {content:"\25bc"; color:#ddd}
+.accordion>input {display:none}
+.accordion>input:checked ~ *:not(label) {
+  max-height: 1000px !important;
+  overflow:hidden !important;
+  -webkit-transition: max-height .3s ease-in;
+  transition: max-height .3s ease-in;
+}
+.accordion>*:not(label) {
+  max-height: 0;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: max-height .3s ease-out;
+  transition: max-height .3s ease-out;
+}
+
+/*** colors from http://clrs.cc/ ***/
+.navy{background-color:#001f3f;color:white}.blue{background-color:#0074d9;color:white}.aqua{background-color:#7fdbff;color:#111111}.teal{background-color:#39cccc;color:white}.olive{background-color:#3d9970;color:white}.green{background-color:#2ecc40;color:white}.aquamarine{background-color:#26a69a;color:white}.lime{background-color:#01ff70;color:#111111}.yellow{background-color:#ffdc00;color:#111111}.orange{background-color:#ff851b;color:white}.red{background-color:#cc1f00;color:white}.fuchsia{background-color:#f012be;color:white}.pink{background-color:#ee6e73;color:white}.purple{background-color:#b10dc9;color:white}.maroon{background-color:#85144b;color:white}.white{background-color:#fff;color:#111111;-webkit-box-shadow:inset 0px 0px 0px 1px #ddd;-moz-box-shadow:inset 0px 0px 0px 1px #ddd;box-shadow:inset 0px 0px 0px 1px #ddd}.gray{background-color:#aaa;color:white}.silver{background-color:#f1f1f1;color:#111111}.black{background-color:#111111;color:white}.glass{background:rgba(255,255,255,0.5);color:#111111}

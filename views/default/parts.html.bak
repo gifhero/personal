@@ -1,0 +1,228 @@
+{{extend 'layout.html'}}
+<style>
+td{
+
+    border: 1px solid black;
+}
+    .offset{
+        padding-left: 20px;
+        padding-top: 80px;
+    }
+}
+</style>
+<body>
+    <div class="centered">
+        <table>
+            <tr>
+                <td>
+                    Phone Model
+                </td>
+                <td>
+                    Black Screen
+                </td>
+                <td>
+                    White Screen
+                </td>
+                <td>
+                    Battery
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    iPhone 4
+                </td>
+                <td>
+                    <a href="">Black Screen</a>
+                </td>
+                <td>
+                    <a href="">White Screen</a>
+                </td>
+                <td>
+                    <a href="">Battery</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    iPhone 4S
+                </td>
+                <td>
+                    <a href="">Black Screen</a>
+                </td>
+                <td>
+                    <a href="">White Screen</a>
+                </td>
+                <td>
+                    <a href="">Battery</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    iPhone 5
+                </td>
+                <td>
+                    <a href="">Black Screen</a>
+                </td>
+                <td>
+                    <a href="">White Screen</a>
+                </td>
+                <td>
+                    <a href="">Battery</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    iPhone 5C
+                </td>
+                <td>
+                    <a href="">Black Screen</a>
+                </td>
+                <td>
+                    <a href="">White Screen</a>
+                </td>
+                <td>
+                    <a href="">Battery</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    iPhone 5S
+                </td>
+                <td>
+                    <a href="">Black Screen</a>
+                </td>
+                <td>
+                    <a href="">White Screen</a>
+                </td>
+                <td>
+                    <a href="">Battery</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    iPhone SE
+                </td>
+                <td>
+                    <a href="">Black Screen</a>
+                </td>
+                <td>
+                    <a href="">White Screen</a>
+                </td>
+                <td>
+                    <a href="">Battery</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    iPhone 6
+                </td>
+                <td>
+                    <a href="">Black Screen</a>
+                </td>
+                <td>
+                    <a href="">White Screen</a>
+                </td>
+                <td>
+                    <a href="">Battery</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    iPhone 6 Plus
+                </td>
+                <td>
+                    <a href="">Black Screen</a>
+                </td>
+                <td>
+                    <a href="">White Screen</a>
+                </td>
+                <td>
+                    <a href="">Battery</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    iPhone 6S
+                </td>
+                <td>
+                    <a href="">Black Screen</a>
+                </td>
+                <td>
+                    <a href="">White Screen</a>
+                </td>
+                <td>
+                    <a href="">Battery</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    iPhone 6S Plus
+                </td>
+                <td>
+                    <a href="">Black Screen</a>
+                </td>
+                <td>
+                    <a href="">White Screen</a>
+                </td>
+                <td>
+                    <a href="">Battery</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    iPhone 7
+                </td>
+                <td>
+                    <a href="">Black Screen</a>
+                </td>
+                <td>
+                    <a href="">White Screen</a>
+                </td>
+                <td>
+                    <a href="">Battery</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    iPhone 7 Plus
+                </td>
+                <td>
+                    <a href="">Black Screen</a>
+                </td>
+                <td>
+                    <a href="">White Screen</a>
+                </td>
+                <td>
+                    <a href="">Battery</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    iPhone 8
+                </td>
+                <td>
+                    <a href="">Black Screen</a>
+                </td>
+                <td>
+                    <a href="">White Screen</a>
+                </td>
+                <td>
+                    <a href="">Battery</a>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    iPhone 8 Plus
+                </td>
+                <td>
+                    <a href="">Black Screen</a>
+                </td>
+                <td>
+                    <a href="">White Screen</a>
+                </td>
+                <td>
+                    <a href="">Battery</a>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>

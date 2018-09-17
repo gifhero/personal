@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<style>
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 3em;
+    }
+
+    .center_footer_text{
+        text-align: center;
+        margin: 1em auto;
+        color: white;
+    }
+
+    .background{
+        background-color: #FFFFFF;
+    }
+
+    .padding_left{
+        padding-left: 2em;
+    }
+
+    .padding_top{
+        padding-top: 2em;
+    }
+
+    .font{
+        font-family: "Roboto", sans-serif;
+    }
+
+</style>
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+      <!--
+    <link href="{{=URL('static','css/examples.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{=URL('static','css/web2py.css')}}" rel="stylesheet" type="text/css"/>
+-->
+    <link href="{{=URL('static','css/layout.css')}}" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="//fonts.google.com/specimen/Roboto">
+    <link rel="shortcut icon" href="{{=URL('static','images/favicon.ico')}}" type="image/x-icon">
+    <link rel="apple-touch-icon" href="{{=URL('static','images/favicon.png')}}">
+    {{include "web2py_ajax.html"}}
+  </head>
+  <body class="font">
+    <header class="black padded"> <!-- makes upper area black -->
+      <div class="container middle"> <!-- reserves upper area -->
+        <div class="fill"> <!-- stops the white from overlapping the words -->
+          <label class="ham" for="menu"><i class="fa fa-bars padded"></i></label>
+          <div class="burger accordion"> <!-- underline style -->
+            <input type="checkbox" id="menu"/>
+            {{=MENU(response.menu,_class='menu')}}
+          </div>
+        </div>
+      </div>
+    </header>
+    {{if response.flash:}}
+    <div class="w2p_flash">
+      {{=response.flash}}
+    </div>
+    {{pass}}
+    <div class="padding_left">{{include}}</div>
+  </body>
+  <script>
+    // prevent android horizontal scrolling
+    //window.addEventListener("scroll", function(){window.scroll(0, window.pageYOffset);}, false);
+  </script>
+</html>
